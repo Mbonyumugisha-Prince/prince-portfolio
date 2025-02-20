@@ -1,0 +1,141 @@
+:root {
+    --bg-black-900: #f2f2fc;
+    --bg-black-100: #fdf9ff;
+    --bg-black-50: #e8dfec;
+    --text-black-900: #302e4d;
+    --text-black-700: #504e70;
+    --skin-color: #ff6347; /* Example skin color */
+}
+
+
+.services-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: #2d2d2d;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.underline {
+    width: 60px;
+    height: 4px;
+    background: var(--skin-color);
+    margin: 0 auto;
+    position: relative;
+}
+
+.underline::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background: var(--skin-color);
+    left: -40px;
+    opacity: 0.5;
+}
+
+.underline::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background: var(--skin-color);
+    right: -40px;
+    opacity: 0.5;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.service-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--skin-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.service-icon i {
+    font-size: 30px;
+    color: white;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    color: #2d2d2d;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-list li {
+    background: #f0f4ff;
+    color: #007bff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin: 5px;
+    display: inline-block;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+}
+
+.skills-list li:hover {
+    background: var(--skin-color);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-title h2 {
+        font-size: 2rem;
+    }
+}
