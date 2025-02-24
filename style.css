@@ -2,11 +2,59 @@
     --bg-black-900: #f2f2fc;
     --bg-black-100: #fdf9ff;
     --bg-black-50: #e8dfec;
-    --text-black-900: #302e4d;
+    --text-black-900: #7f7cac;
     --text-black-700: #504e70;
-    --skin-color: #ff6347; /* Example skin color */
+    --skin-color: #ff6347;
 }
 
+body.dark
+{
+    --bg-black-900: #151515;
+    --bg-black-100: #222222;
+    --bg-black-50: #393939;
+    --text-black-900: #ffffff;
+    --text-black-700: #e9e9e9;
+    
+}
+
+.style-switcher {
+    background: #ffffff; 
+    border: 1px solid #e0e0e0; 
+}
+
+.style-switcher h4 {
+    color: #333333; 
+}
+
+.style-switcher .s-icon {
+    background: #ffffff; 
+    color: #111111; 
+    border: 1px solid #e0e0e0;
+}
+
+.style-switcher .colors span {
+    border: 2px solid #e0e0e0; 
+}
+
+
+body.dark .style-switcher {
+    background: #ffffff; 
+    border: 1px solid #e0e0e0; 
+}
+
+body.dark .style-switcher h4 {
+    color: #333333; 
+}
+
+body.dark .style-switcher .s-icon {
+    background: #ffffff; 
+    color: #333333; 
+    border: 1px solid #e0e0e0; 
+}
+
+body.dark .style-switcher .colors span {
+    border: 2px solid #e0e0e0; 
+}
 body {
     margin: 0;
     padding: 0;
@@ -286,7 +334,7 @@ span.typing {
     padding: 12px 35px;
     color: white;
     border-radius: 40px;
-    display: inline-block; /* Changed from inline to inline-block */
+    display: inline-block; 
     white-space: nowrap;
     background: var(--skin-color);
     transition: all 0.3s ease;
@@ -841,9 +889,9 @@ span.typing {
 
 .about .about-content .skills {
     flex: 0 0 40%;
-    max-width: 40%;
-    position: absolute;
-    left: 800px;
+    max-width: 100%;
+    position: relative;
+    left: auto;
     margin-top: 40px;
 }
 
@@ -928,13 +976,13 @@ span.typing {
 
 .about .about-content .timeline .timeline-item::before {
     content: '';
-    position: absolute; /* Use absolute positioning */
+    position: absolute; 
     width: 1px;
-    height: 100%; /* Full height of the timeline item */
-    left: 7px; /* Adjust this value to align the line */
+    height: 100%; 
+    left: 7px; 
     top: 0;
     background-color: var(--skin-color);
-    z-index: 1; /* Ensure the line is behind the content */
+    z-index: 1; 
 }
 
 .about .about-content .timeline .timeline-date{
@@ -1190,14 +1238,14 @@ padding-bottom: 40px;
     margin-left: 40%;
 }
 
-/* General styling for the send-email section */
+
 .send-email {
     padding: 20px;
     border-radius: 8px;
     margin-left: 34%;
 }
 
-/* Styling for the contact title */
+
 .contact-title {
     font-size: 24px;
     font-weight: bold;
@@ -1205,32 +1253,32 @@ padding-bottom: 40px;
     margin-bottom: 10px;
 }
 
-/* Styling for the contact sub-title */
+
 .contact-sub-title {
     font-size: 16px;
     color: var(--text-black-700);
     margin-bottom: 30px;
 }
 
-/* Styling for the form rows */
+
 .row {
     display: flex;
     flex-wrap: wrap;
     margin: -10px;
 }
 
-/* Styling for the form items */
+
 .form-item {
     flex: 1;
     padding: 30px;
 }
 
-/* Styling for the form groups */
+
 .form-goup {
     margin-bottom: 10px;
 }
 
-/* Styling for the form controls */
+
 .form-control {
     width: 100%;
     padding: 10px;
@@ -1242,26 +1290,25 @@ padding-bottom: 40px;
     transition: border-color 0.3s ease;
 }
 
-/* Focus state for form controls */
 .form-control:focus {
     border-color: var(--text-black-700);
     outline: none;
 }
 
-/* Styling for the textarea */
+
 textarea.form-control {
     resize: vertical;
     min-height: 100px;
 }
 
-/* Styling for the submit button */
+
 .btn {
     font-size: 16px;
     font-weight: 500;
     padding: 12px 35px;
     color: white;
     border-radius: 40px;
-    display: inline-block; /* Changed from inline to inline-block */
+    display: inline-block; 
     white-space: nowrap;
     background: var(--skin-color);
     transition: all 0.3s ease;
@@ -1269,9 +1316,134 @@ textarea.form-control {
     border: none;
 }
 
-/* Hover state for the submit button */
+
 .btn:hover {
     transform: scale(1.05);
 }
+.about .about-content .skills .skill-item .progress {
+    width: 100%;
+    max-width: 100%;
+}
 
 
+@media(max-width:1199px)
+{
+    .aside{
+        left: -270px;
+    }
+
+    .main-content
+    {
+        padding-left: 0;
+    }
+
+    .about .about-content .personal-info .info-item p span
+    {
+        display: block;
+        margin-left: 0;
+    }
+}
+
+@media(max-width:991px)
+
+{    
+    .contact .contact-info-item
+    .portfolio .portfolio-item
+    .service .service-item{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    
+    .home .home-info {
+       flex:  0  0 100%;
+       max-width: 100%;
+     }
+    .home .home-img{
+        display: none;
+    }
+
+    .about .about-content .skills,
+    .about .about-content .personal-info {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .about .about-content .skills {
+        margin-top: 40px;
+    }
+
+    .contact .contact-info-item,
+    .portfolio .portfolio-item,
+    .service .service-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .home .home-info {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .home .home-img {
+        display: none;
+    }
+
+    .about .about-content .skills,
+    .about .about-content .personal-info {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .about .about-content .skills {
+        margin-top: 40px;
+    }
+}
+
+
+@media(max-width:767px)
+
+{   .contact .contact-form .col-16
+    
+    .contact .contact-info-item
+    .portfolio .portfolio-item,
+    .service .service-item
+    .about .about-content .experience
+    .about .about-content .education,
+    .about .about-content .skills,
+    .about .about-content .personal-info
+    {
+        flex:  0  0 100%;
+        max-width: 100%;
+    }
+    .about .about-content .personal-info
+    .about .about-content .skills {
+        padding: 0 15px;
+    }
+    
+    
+
+    .about .about-content .skills .skill-item {
+        margin-bottom: 20px;
+    }
+
+    .contact .contact-info .contact-info-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .send-email {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    .contact .contact-form .form-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .portfolio-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
